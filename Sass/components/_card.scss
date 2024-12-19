@@ -1,0 +1,25 @@
+@use "../partials/variables";
+@use "../partials/colors";
+@use "../partials/fonts";
+
+.card {
+  display: block;
+  padding: variables.$base-padding;
+  border: variables.$base-border-thickness solid colors.$red-50;
+  box-shadow: variables.$base--shadow;
+  border-radius: calc(variables.$base-border-radius / 4);
+
+  .card-title {
+    font-size: fonts.$font-size-lg;
+    padding-bottom: variables.$base-padding;
+    font-weight: bold;
+  }
+
+  .card-body {
+    font-size: variables.$base-font-size;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

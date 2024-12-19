@@ -1,0 +1,70 @@
+// color swatch styles
+
+.panel {
+  // width: 700px
+  background-color: #52565e;
+  display: flex;
+  margin: 0 5px 5px 5px;
+  padding: 10px;
+}
+
+.color-text {
+  width: 50px;
+  height: 38px;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+
+  h3 {
+    padding: 0;
+    padding: 3px 0 0 8px;
+    margin: 0;
+    font-size: 6px;
+  }
+
+  p {
+    margin: 0;
+    padding: 1px 0 0 8px;
+    font-size: 5px;
+  }
+}
+
+.sample {
+  width: 130px;
+  float: left;
+  margin-left: 25px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.color-swatch {
+  border-radius: 5px 5px 0 0;
+  width: 50px;
+  height: 30px;
+}
+
+.color-swatch-split {
+  width: 130px;
+  height: 130px;
+}
+
+.color-swatch-split-1 {
+  border-radius: 5px 0 0 0;
+  width: 100px;
+  height: 130px;
+  float: left;
+}
+
+.color-swatch-split-2 {
+  border-radius: 0 5px 0 0;
+  width: 30px;
+  height: 130px;
+  float: left;
+}
+
+.color-cat {
+  margin: 0 5px;
+  color: white;
+  padding-left: 10px;
+}

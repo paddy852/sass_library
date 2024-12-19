@@ -1,0 +1,42 @@
+@use "sass:color";
+@use "../partials/base";
+@use "../partials/maps";
+@use "../partials/variables";
+@use "../partials/colors";
+
+@mixin btn($bg-color: #e2e2e2) {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: variables.$base-padding variables.$base-padding * 2;
+  border-radius: variables.$base-border-radius;
+  font-size: 10px;
+  margin: 0 5px;
+  margin-bottom: 5px;
+  background-color: $bg-color;
+}
+
+.btn {
+  @include btn;
+}
+
+@each $key, $val in maps.$theme {
+  .btn-#{$key} {
+    @include btn($val);
+    color: color.adjust($val, $lightness: -50%);
+    &:hover {
+      background-color: color.adjust($val, $lightness: 15%);
+    }
+  }
+
+  .btn-outlined-#{$key} {
+    @include btn(transparent);
+    border: variables.$base-border-thickness * 2 solid $val;
+    color: $val;
+    &:hover {
+      background-color: $val;
+      color: color.adjust($val, $lightness: -50%);
+    }
+  }
+}
